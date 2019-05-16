@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "507946911736",
+    "firebase_url": "https://basededatosdenolocreas.firebaseio.com",
+    "project_id": "basededatosdenolocreas",
+    "storage_bucket": "basededatosdenolocreas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:507946911736:android:e2e500e752918158",
+        "android_client_info": {
+          "package_name": "com.luminosity.apps.nolocreas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "507946911736-rqnr3nor4lrgrdh7omrd67k6hrmhah3m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.luminosity.apps.nolocreas",
+            "certificate_hash": "f2b60e791b2cf313ded2a4951e5e119b15894809"
+          }
+        },
+        {
+          "client_id": "507946911736-fjqc4ccsremiiqhmm7f6pcj5mapqj5k7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATfXlDMqlA-1PW-OC6GWHrELgR0aE7730"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "507946911736-fjqc4ccsremiiqhmm7f6pcj5mapqj5k7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

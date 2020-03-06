@@ -1,4 +1,4 @@
-package com.luminosity.apps.nolocreas;
+package com.luminosity.apps.nolocreas.Adaptadores;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.content.Intent;
+
+import com.luminosity.apps.nolocreas.Actividades.Login_Activity;
+import com.luminosity.apps.nolocreas.R;
 
 public class SlideAdapter extends PagerAdapter {
 
@@ -87,7 +90,7 @@ public class SlideAdapter extends PagerAdapter {
         c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(view.getContext(), Login.class);
+                Intent i = new Intent(view.getContext(), Login_Activity.class);
                 view.getContext().startActivity(i);
 
             }

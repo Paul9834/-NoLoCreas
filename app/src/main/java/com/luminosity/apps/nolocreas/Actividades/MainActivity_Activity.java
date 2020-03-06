@@ -1,4 +1,4 @@
-package com.luminosity.apps.nolocreas;
+package com.luminosity.apps.nolocreas.Actividades;
 
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
@@ -8,8 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.luminosity.apps.nolocreas.R;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity_Activity extends AppCompatActivity {
     private ImageButton b;
 
     @Override
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, Welcome.class);
+                Intent i = new Intent(MainActivity_Activity.this, Welcome_Activity.class);
                 startActivity(i);
 
             }
@@ -59,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 .getBoolean("isFirstRun", true);
 
         if (!isFirstRun) {
-            Intent intent = new Intent(MainActivity.this, Login.class);
+            Intent intent = new Intent(MainActivity_Activity.this, Login_Activity.class);
             startActivity(intent);
             finish();
 

@@ -1,4 +1,4 @@
-package com.luminosity.apps.nolocreas;
+package com.luminosity.apps.nolocreas.Actividades;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -17,8 +17,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.luminosity.apps.nolocreas.R;
 
-public class Login extends AppCompatActivity implements View.OnClickListener {
+public class Login_Activity extends AppCompatActivity implements View.OnClickListener {
 
     //defining view objects
     private EditText TextEmail;
@@ -55,9 +56,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
                 if (firebaseAuth.getCurrentUser() != null) {
 
-                    Intent intencion = new Intent(getApplication(), Educative.class);
+                    Intent intencion = new Intent(getApplication(), Educative_Activity.class);
 
-                    intencion.putExtra(Educative.user, firebaseAuth.getCurrentUser().getEmail());
+                    intencion.putExtra(Educative_Activity.user, firebaseAuth.getCurrentUser().getEmail());
 
                     startActivity(intencion);
 
@@ -109,14 +110,14 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                         //checking if success
                         if (task.isSuccessful()) {
 
-                            Toast.makeText(Login.this, "Su registro ha sido realizado exitosamente con el correo: " + TextEmail.getText(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(Login_Activity.this, "Su registro ha sido realizado exitosamente con el correo: " + TextEmail.getText(), Toast.LENGTH_LONG).show();
                         } else {
 
                             if (task.getException() instanceof FirebaseAuthUserCollisionException) //Verifica si ya existe el usuario//
-                                Toast.makeText(Login.this, "Lo sentimos, el usuario ya esta registrado.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login_Activity.this, "Lo sentimos, el usuario ya esta registrado.", Toast.LENGTH_SHORT).show();
                             else {
 
-                                Toast.makeText(Login.this, "Hubo un problema al registrar este usuario.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(Login_Activity.this, "Hubo un problema al registrar este usuario.", Toast.LENGTH_LONG).show();
                             }
                         }
                         progressDialog.dismiss();
@@ -154,23 +155,23 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                         //checking if success
                         if (task.isSuccessful()) {
 
-                            Toast.makeText(Login.this, "Bienvenido a iniciado sesión correctamente con el correo:" + TextEmail.getText(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(Login_Activity.this, "Bienvenido a iniciado sesión correctamente con el correo:" + TextEmail.getText(), Toast.LENGTH_LONG).show();
 
                             //intento//
 
-                            Intent intencion = new Intent(getApplication(), Educative.class);
+                            Intent intencion = new Intent(getApplication(), Educative_Activity.class);
 
-                            intencion.putExtra(Educative.user, email);
+                            intencion.putExtra(Educative_Activity.user, email);
 
                             startActivity(intencion);
 
                         } else {
 
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) //Verifica si ya existe el usuario//
-                                Toast.makeText(Login.this, "Lo sentimos, la contraseña es incorrecta.", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login_Activity.this, "Lo sentimos, la contraseña es incorrecta.", Toast.LENGTH_SHORT).show();
                             else {
 
-                                Toast.makeText(Login.this, "No se ha podido iniciar sesion correctamente o el usuario no existe.", Toast.LENGTH_LONG).show();
+                                Toast.makeText(Login_Activity.this, "No se ha podido iniciar sesion correctamente o el usuario no existe.", Toast.LENGTH_LONG).show();
                             }
                         }
                         progressDialog.dismiss();

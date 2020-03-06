@@ -1,4 +1,4 @@
-package com.luminosity.apps.nolocreas;
+package com.luminosity.apps.nolocreas.Actividades;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,8 +15,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.luminosity.apps.nolocreas.Entidades.ClasesFirebase;
+import com.luminosity.apps.nolocreas.R;
 
-public class Herramienta extends AppCompatActivity {
+public class Herramienta_Activity extends AppCompatActivity {
 
     EditText txttema;
     Spinner seccion;

@@ -1,4 +1,4 @@
-package com.luminosity.apps.nolocreas;
+package com.luminosity.apps.nolocreas.Actividades;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,8 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.luminosity.apps.nolocreas.R;
 
-public class Educative extends AppCompatActivity {
+
+public class Educative_Activity extends AppCompatActivity {
 
     public static final String user = "names";
 
@@ -40,7 +42,7 @@ public class Educative extends AppCompatActivity {
         a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Educative.this, Herramienta.class);
+                Intent i = new Intent(Educative_Activity.this, Herramienta_Activity.class);
 
 
                 int quita = user.indexOf("@");
@@ -52,13 +54,13 @@ public class Educative extends AppCompatActivity {
 
                 if (punto < 0) {
 
-                    i.putExtra(Herramienta.user, comprueba);
+                    i.putExtra(Herramienta_Activity.user, comprueba);
 
                 } else {
 
                     String sinpunto = comprueba.replace(".", "");
 
-                    i.putExtra(Herramienta.user, sinpunto);
+                    i.putExtra(Herramienta_Activity.user, sinpunto);
 
                 }
                 onStop();

@@ -7,7 +7,7 @@
     android:id="@+id/layout"
     android:background="@drawable/gradient_list"
 
-    tools:context=".MainActivity">
+    tools:context=".Actividades.MainActivity_Activity">
 
 
     <ImageView

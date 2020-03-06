@@ -12,16 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".Actividades.MainActivity_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login" />
-        <activity android:name=".Educative" />
-        <activity android:name=".Welcome" />
+        <activity android:name=".Actividades.Login_Activity" />
+        <activity android:name=".Actividades.Educative_Activity" />
+        <activity android:name=".Actividades.Welcome_Activity" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
@@ -33,7 +33,7 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".Herramienta" />
+        <activity android:name=".Actividades.Herramienta_Activity" />
 
     </application>
 

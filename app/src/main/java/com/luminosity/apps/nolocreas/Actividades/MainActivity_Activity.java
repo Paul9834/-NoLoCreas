@@ -2,8 +2,8 @@ package com.luminosity.apps.nolocreas.Actividades;
 
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -59,14 +59,12 @@ public class MainActivity_Activity extends AppCompatActivity {
     private void checkFirstOpen() {
         Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
                 .getBoolean("isFirstRun", true);
-
         if (!isFirstRun) {
             Intent intent = new Intent(MainActivity_Activity.this, Login_Activity.class);
             startActivity(intent);
             finish();
 
         }
-
         getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit().putBoolean("isFirstRun",
                 false).apply();
     }
